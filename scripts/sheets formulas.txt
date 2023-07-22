@@ -1,0 +1,8 @@
+Check sheet 2 against sheet 1, when there is a match on the filenames (Sheet1 'id', Sheet2 'records') copy values from columns using index ',2' and drag down to the last record. Increase index ',2' by one every time you switch to next column.
+=IFERROR(VLOOKUP(B2, Sheet2!A$2:N$1000, 2, FALSE), "")
+
+Check sheet 1 against sheet 2 in empty column in sheet 2.
+=ISNA(MATCH(A2, Sheet1!B$2:B$1000, 0))
+Then sort to only show false. Those are not in Sheet1 and can be copied over.
+
+
